@@ -131,6 +131,8 @@
             box-shadow: 0 5px 20px -2px gray;
             position: fixed;
             z-index: 2;
+            justify-content: space-between;
+            padding: 10px;
         }
         #colaboration_header{
             margin-left: auto;
@@ -144,6 +146,10 @@
 
         #foto{
             scroll-margin-top: 70px;
+        }
+
+        .imageNav{
+            height: 50px;
         }
 
         @media (max-width: 1450px) {
@@ -208,8 +214,11 @@
                 padding: 0 5%;
             }
             .navbar_item{
-                font-size: 15px;
+                font-size: 13.75px;
                 padding: 12.5px 5px;
+            }
+            .imageNav{
+                height: 40px;
             }
         }
         @media (max-width: 500px) {
@@ -231,27 +240,31 @@
             .navbar_item{
                 font-size: 11px;
             }
-            #contents-div{
-                margin-top: 60px;
+            .imageNav{
+                height: 25px;
             }
         }
         @media (max-width: 400px) {
             .navbar_item{
-                padding: 12.5px 3px;
+                padding: 12px 1px;
             }
         }
     </style>
 </head>
 <body>
     <div class="navbar">
+        <div>
+            <img class="imageNav" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/FC_Dinamo_Bucuresti_logo.svg/640px-FC_Dinamo_Bucuresti_logo.svg.png">
+        </div>
+        <div>
         <a class="navbar_item" href="#bio">Biografía</a>
         <a class="navbar_item" href="#img2">Imagenes</a>
         <a class="navbar_item" href="#foto">Fotografías</a>
         <a class="navbar_item">Instagram</a>
         <a class="navbar_item">Tiktok</a>
-        <div id="colaboration_header">
-            <a id="link_instagram" class="navbar_item" style="font-style: italic; float: right;">Rexher</a>
-            <a id="link_instagram" class="navbar_item" style="font-style: italic; float: right;">Catalin</a>
+        </div>
+        <div>
+            <img class="imageNav" src="https://dorottea.es/cdn/shop/files/LOGO_DOROTTEA_B_N.png?height=628&pad_color=fff&v=1658848556&width=1200">
         </div>
     </div>
     <div id="widthDiv">
