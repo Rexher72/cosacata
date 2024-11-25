@@ -9,14 +9,19 @@
     <!--ANIMATE.CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+        :root {
+            --animate-delay: 0.75s;
+            --animate-duration: 2s;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
             font-family: "Quicksand";
-            background: #83a4d4;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+            background: #FF416C;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
 
         #widthDiv{
@@ -29,7 +34,7 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
             width: 60%;
             display: flex;  
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 90px;
             background-color: #f0faff;
             border-radius: 20px;
             -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -55,6 +60,7 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
         #img2 {
             display: flex;
             justify-content: space-evenly;
+            scroll-margin-top: 70px;
         }
 
         #img2 img {
@@ -101,6 +107,45 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
         .mainText{
             font-size: 20px;
         }
+        .navbar_item{
+            font-family: "Raleway", sans-serif;
+            padding: 12.5px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.5s all;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        .navbar_item:hover{
+            background-color: rgb(220, 220, 220);
+        }
+        .navbar{
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 5px 20px -2px gray;
+            position: fixed;
+            z-index: 2;
+        }
+        #colaboration_header{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #bio{
+            scroll-margin-top: 70px;
+        }
+
+        #foto{
+            scroll-margin-top: 70px;
+        }
+
         @media (max-width: 1450px) {
             .mainText{
                 font-size: 17px;
@@ -142,6 +187,9 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
             .mainText{
                 font-size: 20px;
             }
+            .navbar_item{
+                font-size: 16px;
+            }
         }
         @media (max-width: 700px) {
             .mainText{
@@ -158,6 +206,10 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
             }
             .paddingText{
                 padding: 0 5%;
+            }
+            .navbar_item{
+                font-size: 15px;
+                padding: 12.5px 5px;
             }
         }
         @media (max-width: 500px) {
@@ -176,74 +228,96 @@ background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, F
             #title{
                 font-size: 35px;
             }
+            .navbar_item{
+                font-size: 11px;
+            }
+            #contents-div{
+                margin-top: 60px;
+            }
+        }
+        @media (max-width: 400px) {
+            .navbar_item{
+                padding: 12.5px 3px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a class="navbar_item" href="#bio">Biografía</a>
+        <a class="navbar_item" href="#img2">Imagenes</a>
+        <a class="navbar_item" href="#foto">Fotografías</a>
+        <a class="navbar_item">Instagram</a>
+        <a class="navbar_item">Tiktok</a>
+        <div id="colaboration_header">
+            <a id="link_instagram" class="navbar_item" style="font-style: italic; float: right;">Rexher</a>
+            <a id="link_instagram" class="navbar_item" style="font-style: italic; float: right;">Catalin</a>
+        </div>
+    </div>
     <div id="widthDiv">
         <div id="contents-div">
-            <div id="header"><span style="text-align: left;">Fecha: 24/11/2024</span><span style="float: right;">¿Quién es Dorothea Lange?</span></div>
-            <div id="title" class="animate__animated animate__bounceIn">Dorothea Lange</div>
-            <div class="mainText paddingText">
-                <p class="animate__animated animate__bounceIn">
+            <div id="header" class="animate__animated animate__fadeInDown"><span style="text-align: left;">Fecha: 24/11/2024</span><span style="float: right;">¿Quién es Dorothea Lange?</span></div>
+            <div id="title" class="animate__animated animate__fadeInDown">Dorothea Lange</div>
+            <div id="bio" class="mainText paddingText">
+                <p class="animate__animated animate__fadeInDown animate__delay-1s">
                     Hoy he empezado mi investigación sobre Dorothea Lange. No tengo ni idea quien es, así
                     que tendré que buscar información general para saber quién era y porqué fue importante.
                 </p>
-                <p class="animate__animated animate__bounceIn">
+                <p class="animate__animated animate__fadeInDown animate__delay-2s">
                     Dorothea Lange nació en Nueva Jersey en 1895, de niña sufrió poliomielitis (es una
                     enfermedad infecciosa que afecta principalmente al sistema nervioso) y eso le dejó grandes
                     secuelas físicas, sobre todo en los pies. En su adolescencia, estudió fotografía en Nueva
                     York y luego se mudó a San Francisco donde creó un exitoso estudio. A partir de ese
                     momento, se empezó a dar a conocer por todo el mundo por sus maravillosas fotos.
                 </p>
-                <p class="animate__animated animate__bounceIn">
+                <p class="animate__animated animate__fadeInDown animate__delay-3s">
                     Sus fotos más conocidas describen la pobreza y la lucha de los campesinos y migrantes en
                     los años 30 (Gran Depresión), destacando su obra Madre Migrante (1936). Durante la
                     Segunda Guerra Mundial, documentó el internamiento de japoneses estadounidenses en
                     campos de concentración, aunque muchas de esas imágenes fueron censuradas por el
                     gobierno, pero se dieron a conocer igualmente.
                 </p>
-                <p class="animate__animated animate__bounceIn">
+                <p class="animate__animated animate__fadeInDown animate__delay-4s">
                     Dorothea murió en 1965 de cáncer, dejando un legado que marcó la historia de la fotografía.
                 </p>
-                <p class="animate__animated animate__bounceIn">
+                <p class="animate__animated animate__fadeInDown animate__delay-5s">
                     Después de hacer la biografía sobre Dorothea y entender todo lo que hizo, empecé a
                     buscar sus fotografías más importantes para ponerlas en la página web. Mi idea es explicar
                     la imagen también, así que empecé a buscar.
                 </p>
             </div>
             <div id="img2">
-                <img class="animate__animated animate__bounceIn" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Dorothea_Lange_1936_portrait.jpg">
-                <img class="animate__animated animate__bounceIn" src="https://media.revistaad.es/photos/60c2271fc13d5c8c1282e935/master/w_1600%2Cc_limit/251995.jpg">
+                <img class="animate__animated animate__fadeIn animate__delay-5s" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Dorothea_Lange_1936_portrait.jpg">
+                <img class="animate__animated animate__fadeIn animate__delay-5s" src="https://media.revistaad.es/photos/60c2271fc13d5c8c1282e935/master/w_1600%2Cc_limit/251995.jpg">
             </div>
-            <div id="fras">"La cámara fotográfica es un instrumento que enseña a la gente cómo ver sin una cámara fotográfica"<br>
+            <div id="fras" class="animate__animated animate__fadeIn animate__delay-5s">"La cámara fotográfica es un instrumento que enseña a la gente cómo ver sin una cámara fotográfica"<br>
                 <span style="font-weight: normal"><br>-Dorothea Lange</span>
             </div>
-            <div class="imgExp inr">
+            <div id="foto" class="imgExp inr animate__animated animate__fadeIn animate__delay-5s">
                 <img class="imgHalf" src="https://www.infobae.com/resizer/v2/6J5AHRFJY5FY3DAZV7F7LU55KI.jpg?auth=b97b122988d06ff1524816236eab2d588a4bd1d29fa0994752d84a888d99fd48&smart=true&width=1200&height=1200&quality=85"><div class="exp_img mainText">Madre Migrante (1936): Es su foto más importante, describe la pobreza y las
                     dificultades durante la Gran Depresión.</div>
             </div>
-            <div class="imgExp ir">
+            <div class="imgExp ir animate__animated animate__fadeIn animate__delay-5s">
                 <div class="exp_img mainText">White Angel Breadline (1933, San Francisco, California)
                     Hombres haciendo fila para recibir comida. Refleja la necesidad y la lucha de
                     muchas personas durante la Gran Depresión.</div><img class="imgHalf"  src="https://media.nga.gov/iiif/252327e8-a952-4c3d-b37b-5b22f757b348/full/!588,600/0/default.jpg">
             </div>
-            <div class="imgExp inr">
+            <div class="imgExp inr animate__animated animate__fadeIn animate__delay-5s">
                 <img class="imgHalf" src="https://es.artsdot.com/ADC/Art.nsf/O/A25N88/$File/Dorothea_Lange-Damaged_child_shacktown_elm_grove_oklahoma-S.JPG"><div class="exp_img mainText">Niño Dañado (1936, Elm Grove, Oklahoma)
                     Retrato de un niño pobre. Sus ojos muestran tristeza y la difícil vida de los más
                     pequeños en esos tiempos.</div>
             </div>
-            <div class="imgExp ir">
+            <div class="imgExp ir animate__animated animate__fadeIn animate__delay-5s">
                 <div class="exp_img mainText">Exesclavo con Memoria Larga (1937, Alabama)
                     Un hombre mayor que había sido esclavo. En su rostro se nota todas sus
                     experiencias difíciles que ha pasado durante toda su vida.</div><img class="imgHalf" src="https://uploads8.wikiart.org/00333/images/dorothea-lange/ex-slave-with-long-memory-alabama-ca-1937.jpg!Large.jpg">
             </div>
-            <div class="imgExp inr">
+            <div class="imgExp inr animate__animated animate__fadeIn animate__delay-5s">
                 <img class="imgHalf" src="https://www.singulart.com/blog/wp-content/uploads/2023/12/Ditched-Stalled-and-Stranded-San-Joaquin-Valley-California-1935-883x1024.jpg"><div class="exp_img mainText">Abandonados y Varados (1935, Valle de San Joaquín, California)
                     Coches abandonados y familias sin hogar. Representa la migración fallida de
                     quienes buscaban una vida mejor.</div>
             </div>
-            <div class="mainText paddingText">
+            <div class="mainText paddingText animate__animated animate__fadeInDown animate__delay-5s">
                 <div style="font-weight: bold; font-size: 28px; margin-top: 10px;">Final</div>
                 <p>
                     Con esto tengo mucha información para hacer la página web, y tuve que buscar qué
